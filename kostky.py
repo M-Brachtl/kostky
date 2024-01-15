@@ -1,19 +1,21 @@
 import random
 
-points_goal = int(input("Zadej počet bodů, kterého se budeš snažit dosáhnout: "))
+points_goal = int(input("\nZadej počet bodů, kterého se budeš snažit dosáhnout: "))
 cont_end = ""
 turns_count = 0
 celkove_body = 0
+body_min = int(input("Urči si minimální počet bodů za kolo: "))
 
 ## Průběh hry
 while celkove_body < points_goal:
+    print(f"\nMáš celkem {celkove_body} bodů.")
     pocet_kostek = 6
     ## Průběh kola
     body_kola = 0
     turns_count += 1
     while not cont_end:
         ## Průběh hodu
-        print(f"Za toto kolo máš {body_kola} bodů.")
+        print(f"Za toto kolo máš zatím {body_kola} bodů.")
         hod = [random.randint(1,6) for _ in range(pocet_kostek)] # generuje hod kostkami
         while True:
             print("Tvůj hod:",hod)
@@ -62,6 +64,8 @@ while celkove_body < points_goal:
                 print("Tyto kostky nemůžeš vybrat.")
         if cont_end == "1":
             cont_end = ""
+    if body_kola < body_min:
+        body_kola = 0
     celkove_body += body_kola
     print(f"Momentálně máš {celkove_body} bodů.")
     cont_end = ""
