@@ -1,10 +1,17 @@
 img{
     width:75px;
-    margin: 50px;
+    margin-bottom: 10px;
+    margin: 0px 10px 30px;
 }
 img:hover{
     cursor: pointer;
 }
 #selected{
     opacity: 0.5;
+}
+div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
 }
