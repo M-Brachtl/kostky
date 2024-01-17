@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kostky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <img class="playingDice" src="media/kostka_1.png" alt="Kostka1">
+        <img class="playingDice" src="media/kostka_1.png" alt="Kostka2">
+        <img class="playingDice" src="media/kostka_1.png" alt="Kostka3">
+        <img class="playingDice" src="media/kostka_1.png" alt="Kostka4">
+        <img class="playingDice" src="media/kostka_1.png" alt="Kostka5">
+        <img class="playingDice" src="media/kostka_1.png" alt="Kostka6">
+    </div>
+    <button id="throw">Hodit kostkami</button>
+    <button id="new-turn" onclick="endTurn(parseInt(pointsTurn.innerHTML))">Započítat body</button>
+    <aside>
+        <p>Body výběru: <span id="points-show">0</span></p>
+        <p>Body za kolo: <span id="points-turn">0</span></p>
+        <p>Body celkem: <span id="points-total">0</span></p>
+    </aside>
+    <script src="script.js"></script>
+</body>
+
+</html>

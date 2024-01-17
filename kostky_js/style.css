@@ -1,0 +1,10 @@
+img{
+    width:75px;
+    margin: 50px;
+}
+img:hover{
+    cursor: pointer;
+}
+#selected{
+    opacity: 0.5;
+}
