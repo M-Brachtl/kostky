@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <div>
+    <h1>Kostky</h1>
+    <input type="text" id="limit" placeholder="Zadej limit minima bodů"><button id="limit-confirm" onclick="document.getElementById('limit').hidden = true; hidden=true;">Schovat</button>
+    <div class="dice">
         <img class="playingDice" src="media/kostka_1.png" alt="Kostka1">
         <img class="playingDice" src="media/kostka_1.png" alt="Kostka2">
         <img class="playingDice" src="media/kostka_1.png" alt="Kostka3">
@@ -20,11 +22,12 @@
     </div>
     <button id="throw">Hodit kostkami</button>
     <button id="new-turn" onclick="endTurn(parseInt(pointsTurn.innerHTML))">Započítat body</button>
-    <aside>
+    <div>
         <p>Body výběru: <span id="points-show">0</span></p>
         <p>Body za kolo: <span id="points-turn">0</span></p>
         <p>Body celkem: <span id="points-total">0</span></p>
-    </aside>
+    </div>
+    <footer><a href="/readme.md">Pravidla</a></footer>
     <script src="script.js"></script>
 </body>
 

@@ -8,6 +8,7 @@ const pointsTotal = document.getElementById('points-total') // line with points 
 let kostky = 6
 let points
 let selectedDice = Array(); // selected dice
+const limitPoints = document.getElementById('limit')
 
 function countPoints(countedDice=[]){
     let body_vyberu = 0;
@@ -38,7 +39,7 @@ function countPoints(countedDice=[]){
     
 }
 function endTurn(addedPoints){
-    if(addedPoints === -1 || !parseInt(pointsShow.innerHTML)){ addedPoints = 0; }else{
+    if(addedPoints === -1 || !parseInt(pointsShow.innerHTML) || parseInt(pointsShow.innerHTML)+addedPoints < parseInt(limitPoints.value)){ addedPoints = 0; }else{
         addedPoints += countPoints(selectedDice);
     };
     pointsTotal.innerHTML = parseInt(pointsTotal.innerHTML) + addedPoints;
