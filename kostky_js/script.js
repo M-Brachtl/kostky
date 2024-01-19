@@ -39,7 +39,7 @@ function countPoints(countedDice=[]){
     
 }
 function endTurn(addedPoints){
-    if(addedPoints === -1 || !parseInt(pointsShow.innerHTML) || parseInt(pointsShow.innerHTML)+addedPoints < parseInt(limitPoints.value)){ addedPoints = 0; }else{
+    if(addedPoints === -1 || !parseInt(pointsShow.innerHTML) || parseInt(pointsShow.innerHTML)+addedPoints < limitPoints.value){ addedPoints = 0; }else{
         addedPoints += countPoints(selectedDice);
     };
     pointsTotal.innerHTML = parseInt(pointsTotal.innerHTML) + addedPoints;
@@ -54,6 +54,12 @@ function endTurn(addedPoints){
         
     }
     kostky = 6;
+    document.getElementById('turnsLeft').innerHTML = parseInt(document.getElementById('turnsLeft').innerHTML) - 1
+    if(document.getElementById('turnsLeft').innerHTML == 0){
+        document.querySelector('main').hidden = true
+        document.getElementById('endGame').hidden = false
+        document.getElementById('finalPoints').innerHTML = pointsTotal.innerHTML
+    }
 }
 
 for (let index = 0; index < dices.length; index++) {

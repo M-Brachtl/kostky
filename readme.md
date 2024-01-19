@@ -4,7 +4,6 @@ Verze:
 * [Web](#webová-verze)
 
 ## Python
-Jedná se o jednoduchou hru s kostkami implementovanou v Pythonu. Hra vyzve hráče, aby nastavil cílový skóre a minimální skóre za každé kolo. Hráč poté hází sady kostek, snaží se nahromadit body a dosáhnout stanoveného cílového skóre.
 ### Jak hrát
 * Zadejte cílové skóre, které chcete dosáhnout.
 * Nastavte minimální skóre požadované pro každé kolo.
@@ -37,7 +36,7 @@ Kdybys ukončil toto kolo, měl bys 700 bodů.
 Webová verze hry se nacházi ve složce [kostky_js](./kostky_js)
 
 ### Jak hrát
-* Určete si minimální počet bodů za kolo
+* Určete si minimální počet bodů za kolo a počet kol (pro nekonečnou hru zadejte 0)
 * Kostky, které chcete odebrat ze hry označte kliknutím
 
 ### Spuštění

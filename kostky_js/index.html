@@ -12,25 +12,42 @@
 <body>
     <h1>Kostky</h1>
     <div id="customRules">
-    Zadej limit minima bodů: <input type="text" id="limit" value="0"><button id="limit-confirm" onclick="document.getElementById('customRules').hidden = true">Schovat</button>
+        <p>Zadej limit minima bodů: <input type="number" step="50" min="0" id="limit" value="0"></p>
+        <p>Zadej, na kolik kol chceš hrát: <input type="number" min="1" id="turnsNum" value="10"></p>
+        <button id="limit-confirm" onclick="document.getElementById('customRules').hidden = true">Potvrdit</button>
     </div>
-    <div class="dice">
-        <img class="playingDice" src="media/kostka_1.png" alt="Kostka1">
-        <img class="playingDice" src="media/kostka_1.png" alt="Kostka2">
-        <img class="playingDice" src="media/kostka_1.png" alt="Kostka3">
-        <img class="playingDice" src="media/kostka_1.png" alt="Kostka4">
-        <img class="playingDice" src="media/kostka_1.png" alt="Kostka5">
-        <img class="playingDice" src="media/kostka_1.png" alt="Kostka6">
-    </div>
-    <button id="throw">Hodit kostkami</button>
-    <button id="new-turn" onclick="endTurn(parseInt(pointsTurn.innerHTML))">Započítat body</button>
-    <div>
-        <p>Body výběru: <span id="points-show">0</span></p>
-        <p>Body za kolo: <span id="points-turn">0</span></p>
-        <p>Body celkem: <span id="points-total">0</span></p>
+    <main hidden>
+        <div class="dice">
+            <img class="playingDice" src="media/kostka_1.png" alt="Kostka1">
+            <img class="playingDice" src="media/kostka_1.png" alt="Kostka2">
+            <img class="playingDice" src="media/kostka_1.png" alt="Kostka3">
+            <img class="playingDice" src="media/kostka_1.png" alt="Kostka4">
+            <img class="playingDice" src="media/kostka_1.png" alt="Kostka5">
+            <img class="playingDice" src="media/kostka_1.png" alt="Kostka6">
+        </div>
+        <button id="throw">Hodit kostkami</button>
+        <button id="new-turn" onclick="endTurn(parseInt(pointsTurn.innerHTML))">Započítat body</button>
+        <div>
+            <p>Body výběru: <span id="points-show">0</span></p>
+            <p>Body za kolo: <span id="points-turn">0</span></p>
+            <p>Body celkem: <span id="points-total">0</span></p>
+            <br>
+            <p>Zbývá kol: <span id="turnsLeft"></span></p>
+        </div>
+    </main>
+    <div id="endGame" hidden>
+        <p>Váš celkový počet bodů: <span id="finalPoints"></span></p>
+        <button onclick="location.reload()">Hrát znovu</button>
     </div>
     <footer><a href="https://github.com/M-Brachtl/kostky/blob/main/readme.md">Pravidla</a></footer>
     <script src="script.js"></script>
+    <script>
+        document.getElementById('limit-confirm').addEventListener('click',()=>{
+            document.getElementById('customRules').hidden = true
+            document.querySelector('main').hidden = false
+            document.getElementById('turnsLeft').innerHTML = document.getElementById('turnsNum').value
+        })
+    </script>
 </body>
 
 </html>
