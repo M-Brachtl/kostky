@@ -1,7 +1,17 @@
 # Hra Kostky
 Verze:
-* [Python](#python-verze)
+* [Python](#python)
 * [Web](#webová-verze)
+
+## Pravidla hry
+* Postupka je hodnocena 1500 body
+* Kombinace tří stejných čísel je hodnocena 100násobkem čísla kostky
+* Při kobinaci čtyř a více stejných čísel 100násobky sčítají s každou další kostkou
+* Jedničky nejsou násobeny stovkou, ale tisícovkou
+* V ostatních případech má 1 hodnotu 100 a 5 hodnotu 50. Ostatní kostky nemají hodnotu a proto je takto nelze odejmout ze hry
+* Při odejmutí všech 6 kostek hráč opět dostává šest kostek
+* Pokud se nepodaří vybrat platné kostky v daném hodu, nezískáte za toto kolo žádné body.
+Pravidla jsou stejná napříč verzemi
 
 ## Python
 ### Jak hrát
@@ -10,16 +20,8 @@ Verze:
 * Během každého kola hodíte sadu kostek a akumulujete body na základě kombinací, které získáte.
 * Zvolte, zda chcete pokračovat v hodu pro další body, nebo ukončit kolo a přidat si aktuální body k celkovému skóre. Také se můžete rozhodnout změnit výběr kostek
 * Hra pokračuje, dokud nedosáhnete nebo nepřekročíte cílové skóre.
-### Pravidla hry
-* Postupka je hodnocena 1500 body
-* Kombinace tří stejných čísel je hodnocena 100násobkem čísla kostky
-* Při kobinaci čtyř a více stejných čísel 100násobky sčítají s každou další kostkou
-* Jedničky nejsou násobeny stovkou, ale tisícovkou
-* V ostatních případech má 1 hodnotu 100 a 5 hodnotu 50. Ostatní kostky nemají hodnotu a proto je takto nelze odejmout ze hry
-* Při odejmutí všech 6 kostek hráč opět dostává šest kostek
-* Pokud se nepodaří vybrat platné kostky v daném hodu, nezískáte za toto kolo žádné body.
 ### Ukázka hraní
-```python
+```
 Zadej počet bodů, kterého se budeš snažit dosáhnout: 5000
 Urči si minimální počet bodů za kolo: 300
 
@@ -41,4 +43,3 @@ Webová verze hry se nacházi ve složce [kostky_js](./kostky_js)
 
 ### Spuštění
 Webovou verzi si můžete vyzkoušet na odkaze [zde](https://m-brachtl.github.io/kostky/kostky_js/)  
-Stránka je přizpůsobená i pro spuštění na mobilu
