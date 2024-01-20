@@ -42,4 +42,4 @@ Webová verze hry se nacházi ve složce [kostky_js](./kostky_js)
 * Kostky, které chcete odebrat ze hry označte kliknutím
 
 ### Spuštění
-Webovou verzi si můžete vyzkoušet na odkaze [zde](https://m-brachtl.github.io/kostky/kostky_js/)  
+Webovou verzi si můžete vyzkoušet na odkaze [zde](https://m-brachtl.github.io/kostky/kostky_js/)
