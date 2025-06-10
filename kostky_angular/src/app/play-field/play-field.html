@@ -1,1 +1,5 @@
-<p>play-field works!</p>
+<div class="play-field">
+    @for (die of dice(); track $index) {
+        <img src="{{ 'dice_images/kostka_' + die + '.png'}}" alt="kostka_img" />
+    }
+</div>
